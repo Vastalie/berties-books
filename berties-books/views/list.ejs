@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>list <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>list <%=shopName%></h1>
+    <p>Here are all the books we sell</p>
+    <ul>
+      <% if (availableBooks && availableBooks.length > 0) { %>
+          <% availableBooks.forEach(book => { %>
+              <li><%= book.name %> - <%= book.price %></li>
+          <% }); %>
+      <% } else { %>
+          <li>No books available.</li>
+      <% } %>
+  </ul>
+  </body>
+</html>
